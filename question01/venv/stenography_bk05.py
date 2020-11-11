@@ -98,10 +98,10 @@ def encode(fileName, data):
     baseFile = fileName.split('/')
     length = len(baseFile)
     base = baseFile[len(baseFile) - 1]
-    #print("basefile: ", baseFile[len(baseFile) - 1])
+    print("basefile: ", baseFile[len(baseFile) - 1])
 
     new_img_name = "encoded_" + base
-    #print("new_img_name: ", new_img_name)
+    print("new_img_name: ", new_img_name)
 
     newimg.save(new_img_name, str(new_img_name.split(".")[1].upper()))
 
