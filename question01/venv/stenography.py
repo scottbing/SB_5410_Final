@@ -4,8 +4,10 @@
 # pixels of image and modify it
 from PIL import Image
 
-#used 1this tutorial: https://medium.com/better-programming/image-steganography-using-python-2250896e48b9
-
+# Taken from: https://medium.com/better-programming/image-steganography-using-python-2250896e48b9
+# How To Hide Data in Images Using Python
+# Learn the art of Image Steganography
+# Written by: Ashwin Goel
 
 # Convert encoding data into 8-bit binary
 # form using ASCII value of characters
