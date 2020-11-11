@@ -1,6 +1,6 @@
-# BSSD 5410 Final - Question #1
+# BSSD Midterm Project
 # Scott Bing
-# Stenography
+# Image Analysis
 
 from tkinter import *
 from stenography import *
@@ -31,6 +31,7 @@ class Application(Frame):
         # open the application frame
         self.create_widgets()
         # self.create_initial_screen()
+
     # end application constructor
 
     def openFile(self):
@@ -42,7 +43,7 @@ class Application(Frame):
                                         initialdir=os.getcwd(),
                                         filetypes=[("PNG files", ".png .PNG")],
                                         title='Choose an image.')
-        #print("fileName = ", self.fileName)
+        print("fileName = ", self.fileName)
     # end def openFile(self):
 
     def resetScreen(self):
@@ -102,6 +103,18 @@ class Application(Frame):
         self.msg_ent = Entry(self, width=47)
         self.msg_ent.grid(row=6, column=0, columnspan=2, padx=8, sticky=W)
 
+        Label(self,
+              text="Decoded Message:"
+              ).grid(row=5, column=0, padx=5, sticky=W)
+
+        self.decoded_message = StringVar()
+        Label(self,
+              textvariable = self.decoded_message,
+        ).grid(row=6, column=0, sticky=W)
+
+        btnFont = font.Font(weight="bold")
+        btnFont = font.Font(size=19)
+
         # create a the generate button
         self.generate_btn = Button(self,
                                    text="Run",
@@ -116,7 +129,7 @@ class Application(Frame):
                                 command=self.resetScreen,
                                 highlightbackground='#2E4149'
                                 # font=btnFont
-                                ).grid(row=7, column=0, sticky=W, pady=10, padx=45)
+                                ).grid(row=7, column=1, sticky=W, pady=10, padx=5)
 
         ttk.Separator(self,
                       orient=HORIZONTAL
@@ -137,6 +150,7 @@ class Application(Frame):
               font=self.errFont,
               wraplength=200
               ).grid(row=9, column=0, sticky=NSEW, pady=4)
+
     # end def create_widgets(self):
 
     # process user selections
@@ -154,7 +168,7 @@ class Application(Frame):
 # main
 def main():
     """Application Entry Point - the main
-    driver code for the BSSD5410 Final Question #1"""
+    driver code for the BSSD5410 Midterm Project"""
     root = Tk()
     root.resizable(height=None, width=None)
     root.title("BSSD 5410 Final Question #1")
