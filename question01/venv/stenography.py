@@ -136,20 +136,4 @@ def decode(fileName):
             return data
 
 
-# Main Function
-def main():
-    a = int(input(":: Welcome to Steganography ::\n"
-                  "1. Encode\n2. Decode\n"))
-    if (a == 1):
-        encode()
-
-    elif (a == 2):
-        print("Decoded Word : " + decode())
-    else:
-        raise Exception("Enter correct input")
-
-
-# Driver Code
-if __name__ == '__main__':
-    # Calling main function
-    main()
+#
